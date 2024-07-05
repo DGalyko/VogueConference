@@ -275,52 +275,54 @@ p {
     justify-content: center;
     grid-gap: 70px;
     height: 112px;
-    @media (max-width: 767px) {
+    @media (max-width: 1279px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 0;
-      margin-left: -14px;
+      height: 160px;
+    }
+    @media (max-width: 767px) {
       height: 120px;
     }
   }
   a {
     display: flex;
+    @media (max-width: 1279px) {
+      align-items: center;
+      justify-content: center;
+    }
     img {
-      max-height: 90px;
+      max-height: 80px;
       @media (max-width: 767px) {
-        max-height: 70px;
+        max-height: 50px;
       }
     }
     &:nth-child(1) {
       img {
-        max-height: 100px;
-        margin-right: -30px;
         @media (max-width: 767px) {
-          max-height: 70px;
-          margin-right: 0;
+
         }
       }
     }
     &:nth-child(2) {
       img {
-        max-height: 150px;
         @media (max-width: 767px) {
-          max-height: 110px;
+
         }
       }
     }
     &:nth-child(3) {
       img {
-        max-height: 90px;
+        max-height: 70px;
         @media (max-width: 767px) {
-          max-height: 80px;
-          padding: 0 12px;
+          max-height: 40px;
         }
       }
     }
     &:nth-child(4) {
       img {
-        max-height: 100px;
         @media (max-width: 767px) {
-          max-height: 80px;
+
         }
       }
     }
@@ -714,15 +716,26 @@ p {
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
   }
+  &__description {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 16px;
+    @media (min-width: 768px) {
+      font-size: 38px;
+      margin: 16px 0 30px;
+    }
+  }
   &__info {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 80%;
     margin: 60px auto;
     @media (min-width: 768px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
       margin: 0 auto;
     }
     img {
@@ -744,6 +757,9 @@ p {
   &__place {
     text-align: center;
     color: #ffffff;
+    @media (min-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
   &__photos {
     display: grid;
@@ -768,6 +784,17 @@ p {
         height: 100%;
         width: 100%;
       }
+    }
+  }
+  &__photos.desktop {
+    display: none;
+    @media (min-width: 1280px) {
+      display: grid;
+    }
+  }
+  &__photos.mobile {
+    @media (min-width: 1280px) {
+      display: none;
     }
   }
 }
