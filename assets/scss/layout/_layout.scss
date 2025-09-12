@@ -303,7 +303,7 @@ p {
       height: 160px;
     }
     @media (max-width: 767px) {
-      //height: 120px;
+      height: 120px;
     }
   }
   a {
@@ -578,7 +578,7 @@ p {
       border-radius: 10px;
       text-transform: uppercase;
       font-weight: 700;
-      background: #00F;
+      background: #0A2E04;
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
       transition: 0.25s linear;
       @media (max-width: 767px) {
@@ -587,7 +587,7 @@ p {
         font-size: 11px;
       }
       &:hover {
-        background: #F9C700;
+        background: #C6E6AE;
       }
     }
   }
@@ -823,4 +823,8 @@ p {
 
 * {
   scroll-margin-top: 112px;
+}
+
+.speakers.qa {
+  padding-top: 80px;
 }
