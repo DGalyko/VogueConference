@@ -786,6 +786,7 @@ p {
   &__photos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     @media (min-width: 768px) {
       max-height: calc(100vh - 61px);
     }
