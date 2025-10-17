@@ -297,9 +297,12 @@ p {
     grid-gap: 70px;
     //height: 112px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    @media (max-width: 767px) {
+    @media (min-width: 768px) AND (max-width: 1023px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 1023px) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 0;
       //height: 160px;
     }
